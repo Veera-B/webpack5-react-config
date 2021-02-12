@@ -20,7 +20,7 @@ module.exports ={
     module:{
         rules:[
             {
-                test: /\.s?css$/i,
+                test: /\.(s[ac]|c)ss$/i,//(s|c)starts with s OR c [ac] means either a or c after s
                 use:[MiniCssExtractPlugin.loader,"css-loader","postcss-loader","sass-loader"],
             },
             {
