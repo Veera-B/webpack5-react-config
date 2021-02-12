@@ -1,3 +1,5 @@
+import './index.scss';
+
 const cars = {
     kia : 2,
     toyata:4,
