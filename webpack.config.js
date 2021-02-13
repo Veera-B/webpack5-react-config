@@ -17,11 +17,32 @@ module.exports ={
         contentBase: './dist',
         hot: true
     },
+    output:{
+        assetModuleFilename : "images/[hash]_[name]__[ext]",
+    },
     module:{
         rules:[
             {
+                test: /\.(png|jpg|jpeg|gif|svg)$/i,
+                type: 'asset',
+                // parser:{
+                //     dataUrlCondition:{
+                //         maxSize: 30*500,
+                //     }
+                // }
+                
+            },
+            {
                 test: /\.(s[ac]|c)ss$/i,//(s|c)starts with s OR c [ac] means either a or c after s
-                use:[MiniCssExtractPlugin.loader,"css-loader","postcss-loader","sass-loader"],
+                use:[
+                    {
+                        loader:MiniCssExtractPlugin.loader,
+                        options:{publicPath : ""}
+                    },
+                    "css-loader",
+                    "postcss-loader",
+                    "sass-loader",
+                ],
             },
             {
                 test: /\.jsx?$/i,

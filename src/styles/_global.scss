@@ -5,6 +5,8 @@ body{
     background-color: variables.$bg;
     color: var(--text);
     font-size: large;
+    background: url('./assets/car1.jpg');
+
 }
 main{
     display: flex;
@@ -13,4 +15,11 @@ main{
 }
 button{
     font-size: 1.5em;
+}
+.cars{
+    width: 100px;
+    height: 100px;
+}
+ul{
+    list-style-image: url('./assets/car4.png');
 }
