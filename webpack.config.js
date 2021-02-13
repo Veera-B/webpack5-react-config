@@ -35,4 +35,7 @@ module.exports ={
     plugins:[
         new MiniCssExtractPlugin()
     ],
+    resolve: {
+        extensions: [ ".js",".jsx"]
+    },
 }
