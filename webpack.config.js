@@ -1,4 +1,5 @@
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 let mode = 'development';
@@ -54,7 +55,11 @@ module.exports ={
         ],
     },//module end
     plugins:[
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin(),
+        new HtmlWebpackPlugin({
+            template: "./src/index.html",
+            filename: 'index.html'
+        }),
     ],
     resolve: {
         extensions: [ ".js",".jsx"]
